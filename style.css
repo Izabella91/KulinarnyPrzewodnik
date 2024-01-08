@@ -10,6 +10,7 @@
     font-size: 12px;
 }
 body{
+    box-sizing: border-box;
     font-family: montserrat;
 }
 
@@ -24,10 +25,10 @@ body{
     align-items: center;
     color: #fff;
 }
-.search {
+.search {                           /*Tutaj zaczyna się wyszukiwarka*/
     background-color: #444444;
     height: 35px;
-    width:86%;
+    width:84%;
     position: absolute;
     right: 0; 
 }
@@ -41,9 +42,9 @@ section input {
     font-size: 20px;
     padding: 0 100px;
 }
-section button {
+section button {                    /*Przycisk do wyszukiwarki*/
     padding:0 100 px;
-    height: 90%;
+    height: 89%;
     background: #787575;
     color: #ffffff;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -71,40 +72,46 @@ ul li a{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
-
-nav{                   
+nav{                                            /*Menu boczne "Kategorie restauracji"*/
     float:left;
-    width:14%;
+    width:16%;
     font-weight: bold;
     background-color: #63b0aa;
     height: 700px;
+    flex-basis: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    
   }
   
 label.menu{
 color:rgb(255, 255, 255);
 font-size: 16px;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-line-height: 50px;
-margin-left: 10px;
+line-height: 40px;
+margin-left: 7px;
+
+
 }
 nav ul li{
-font-size: 14px;
-line-height: 39px;
-padding:0 7px;
+font-size: 10px;
+line-height: 35px;
+padding:0 1px;
 }
+
 nav ul li a{
     color: rgb(0, 0, 0);
-    font-size: 15px;
-    padding:13px 13px;
+    font-size:17px;
+    padding:13px 3px;
     border-radius: 20px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 a.active,a:hover{
     background: #c0d2e0;
     transition: .8s;
 }
-  
+
   #aktualnosci {
     float:left;
     width:80%;
