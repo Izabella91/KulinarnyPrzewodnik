@@ -72,7 +72,8 @@ ul li a{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-nav{                                            /*Menu boczne "Kategorie restauracji"*/
+nav{
+                                                /*Menu boczne "Kategorie restauracji"*/
     float:left;
     width:16%;
     font-weight: bold;
@@ -124,6 +125,116 @@ nav ul li a.active, nav ul li a:hover{
     height: 700px;
     line-height: 150px;
   }
+
+  #kontakt {
+    margin-top: 100px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+#kontakt h2,
+#kontakt h3 {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#kontakt-informacje {
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+#kontakt-informacje p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#kontakt-formularz {
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    padding-left: 20px;
+    text-align: left;
+}
+
+#kontakt-formularz form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#kontakt-formularz label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#kontakt-formularz input,
+#kontakt-formularz textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#kontakt-formularz button {
+    padding: 10px 20px;
+    background-color: #63b0aa;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#kontakt-formularz button:hover {
+    background-color: #498c86;
+}
+
+#kontakt-formularz h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+  #onas {
+    float: left;
+    width: 80%;
+    background-color: white;
+    height: auto;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+
+}
+
+#onas p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+
+
+
 
 footer {
     display: flex;
