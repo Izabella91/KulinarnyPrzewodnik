@@ -34,4 +34,8 @@ app.get('/search', async (req, res) => {
       res.status(500).send('Błąd serwera');
     }
   });
+
+  app.listen(port, () => {
+    console.log(`Serwer uruchomiony na porcie ${port}`);
+});
   

@@ -119,12 +119,66 @@ nav ul li a.active, nav ul li a:hover{
     transition: .8s;
 }
 #aktualnosci {
-    float:left;
-    width:80%;
-    background-color:rgb(255, 255, 255);
+    float: right;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
     height: 700px;
-    line-height: 150px;
-  }
+    max-height: 900px; /* Ustaw maksymalną wysokość diva */
+    line-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto; /* Dodaj pionowy pasek przewijania w razie potrzeby */
+
+}
+
+
+.centered-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centered-content h1 {
+    margin-top: -70px; /* Zmniejsz margines na górę dla napisu */
+    font-size: 36px; /* Dostosuj wielkość napisu według potrzeb */
+ /* Dodaj margines na górę dla napisu */
+}
+.thumbnail1 {
+    margin-top: 200px;
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Dodaj margines na dół dla obrazka */
+}
+.thumbnail {
+    margin-top: 200px;
+    width: 200px;
+    height: 133px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Dodaj margines na dół dla obrazka */
+    border: 1px solid #000000; /* Dodaj obramowanie obrazka */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+
+.grid-item {
+    background-color: #63b0aa;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+}
 
   #kontakt {
     margin-top: 100px;

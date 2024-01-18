@@ -20,7 +20,7 @@
     <input type="text" id="search-box" placeholder="Wyszukaj restauracje...">
     <button >Szukaj</button>
     
-    <<ul>
+    <ul>
         <li><a href="index.html">Aktualności</a></li>
         <li><a href="onas.html">O nas</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
@@ -33,24 +33,53 @@
         <label class="menu">KATEGORIE RESTURACJI:</label>
            <ul>
                 <li><a class="active" href="amerykanska.html">Kuchnia Amerykańska</a></li>
-                <li><a href="arabska.html">Kuchnia Arabska</a></li>
-                <li><a href="chinska.html">Kuchnia Chińska</a></li>
-                <li><a href="grecka.html">Kuchnia Grecka</a></li>
-                <li><a href="gruzinska.html">Kuchnia Gruzińska</a></li>
-                <li><a href="indynska.html">Kuchnia Indyńska</a></li>
-                <li><a href="japonska.html">Kuchnia Japońska</a></li>
-                <li><a href="koreanska.html">Kuchnia Koreańska</a></li>
-                <li><a href="meksykanska.html">Kuchnia Meksykańska</a></li>
-                <li><a href="polska.html">Kuchnia Polska</a></li>
-                <li><a href="tajska.html">Kuchnia Tajska</a></li>
-                <li><a href="turecka.html">Kuchnia Turecka</a></li>
-                <li><a href="ukrainska.html">Kuchnia Ukraińska</a></li>
-                <li><a href="wegetarianska.html">Kuchnia Wegetariańska</a></li>
-                <li><a href="wietnamska.html">Kuchnia Wietnamska</a></li>
+                <li><a href="arabska.html">Kuchnia Arabska</a></li><br>
+                <li><a href="chinska.html">Kuchnia Chińska</a></li><br>
+                <li><a href="grecka.html">Kuchnia Grecka</a></li><br>
+                <li><a href="gruzinska.html">Kuchnia Gruzińska</a></li><br>
+                <li><a href="indynska.html">Kuchnia Indyńska</a></li><br>
+                <li><a href="japonska.html">Kuchnia Japońska</a></li><br>
+                <li><a href="koreanska.html">Kuchnia Koreańska</a></li><br>
+                <li><a href="meksykanska.html">Kuchnia Meksykańska</a></li><br>
+                <li><a href="polska.html">Kuchnia Polska</a></li><br>
+                <li><a href="tajska.html">Kuchnia Tajska</a></li><br>
+                <li><a href="turecka.html">Kuchnia Turecka</a></li><br>
+                <li><a href="ukrainska.html">Kuchnia Ukraińska</a></li><br>
+                <li><a href="wegetarianska.html">Kuchnia Wegetariańska</a></li><br>
+                <li><a href="wietnamska.html">Kuchnia Wietnamska</a></li><br>
                 <li><a href="wloska.html">Kuchnia Włoska</a></li></ul>
         </nav>
-        <div id="aktualnosci">Kuchnia Amerykańska</div>
-      </div>
+        <div id="aktualnosci">
+            <div class="centered-content">
+                <img src="/images/amerykanska.jpg" alt="Kuchnia Amerykańska" class="thumbnail">
+                <h1>Kuchnia Amerykańska</h1>
+                
+            </div>
+
+            <div class="grid-container">
+                <div class="grid-item">Rekord 1</div>
+                <div class="grid-item">Rekord 2</div>
+                <div class="grid-item">Rekord 3</div>
+                <div class="grid-item">Rekord 4</div>
+                <div class="grid-item">Rekord 5</div>
+                <div class="grid-item">Rekord 6</div>
+                
+                <!--  
+// Przykładowa funkcja do dynamicznego dostosowania liczby kolumn
+function updateGridColumns(numberOfColumns) {
+    const gridContainer = document.getElementById('gridContainer');
+    gridContainer.style.gridTemplateColumns = `repeat(${numberOfColumns}, 1fr)`;
+}
+
+// Przykładowa ilość rekordów z bazy danych
+const numberOfRecords = 6;
+
+// Dostosuj liczbę kolumn na podstawie liczby rekordów
+updateGridColumns(numberOfRecords); 
+--> 
+            
+</div>
+        </div>
 
 
       <footer>
