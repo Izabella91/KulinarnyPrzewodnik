@@ -5,13 +5,13 @@ const dbName = 'KulinarnyPrzewodnik';
 
 const restaurants = [
   {
-    zdjecia: 'url_do_obrazka_1',
+    zdjecia: 'url_do_obrazka_1z',
     kuchnia: 'Amerykańska',
-    nazwa: 'Restauracja 1',
-    ulica: 'ul. Przykładowa 6',
-    opis: 'Opis restauracji 1',
-    link:'LinkResturacji',
-    link2:'LinkResturacji2',
+    nazwa: 'Restauracja 1z',
+    ulica: 'ul. Przykładowa 6z',
+    opis: 'Opis restauracji 1z',
+    link:'LinkResturacjiz',
+    link2:'LinkResturacji2z',
   },
 ];
 
