@@ -73,7 +73,7 @@ ul li a{
 }
 
 nav{
-                                                /*Menu boczne "Kategorie restauracji"*/
+     /*Menu boczne "Kategorie restauracji"*/
     float:left;
     width:16%;
     font-weight: bold;
@@ -127,11 +127,39 @@ nav ul li a.active, nav ul li a:hover{
     line-height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     overflow-y: auto; /* Dodaj pionowy pasek przewijania w razie potrzeby */
 
 }
-
+.search-result {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 60px;
+    border: 10px solid #ccc;   /*ramka*/
+    border-radius: 25px;
+    padding: 10px;
+  }
+  
+  .search-result ul {
+    display: flex;
+  }
+  
+  .search-result img {
+    max-width: 400px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  
+  .search-result h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .search-result p {
+    margin: 10px 0;
+  }  
+  
 
 .centered-content {
     text-align: center;
@@ -180,7 +208,7 @@ nav ul li a.active, nav ul li a:hover{
     font-size: 18px;
 }
 
-  #kontakt {
+#kontakt {
     margin-top: 100px;
     background-color: white;
     padding: 50px;
@@ -203,13 +231,15 @@ nav ul li a.active, nav ul li a:hover{
 #kontakt-informacje {
     padding: 20px;
     flex: 1;
-    text-align: left;
+    text-align: right;
+    margin-right: 10px;
 }
 
 #kontakt-informacje p {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
+    margin-top: 10px; 
 }
 
 #kontakt-formularz {
@@ -217,6 +247,7 @@ nav ul li a.active, nav ul li a:hover{
     box-sizing: border-box;
     padding-left: 20px;
     text-align: left;
+    margin-top: -100px;
 }
 
 #kontakt-formularz form {
@@ -227,14 +258,23 @@ nav ul li a.active, nav ul li a:hover{
 
 #kontakt-formularz label {
     font-size: 18px;
+    margin-left: 15px;
     color: #333;
     margin-bottom: 10px;
     width: 100%;
 }
 
-#kontakt-formularz input,
+#kontakt-formularz input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 #kontakt-formularz textarea {
     width: 100%;
+    height: 150px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -243,11 +283,12 @@ nav ul li a.active, nav ul li a:hover{
 
 #kontakt-formularz button {
     padding: 10px 20px;
+    margin-left: 500px;
     background-color: #63b0aa;
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -261,24 +302,29 @@ nav ul li a.active, nav ul li a:hover{
     color: #333;
     margin-bottom: 20px;
     margin-top: 20px;
+    margin-left: 260px;
     text-align: left;
 }
-  #onas {
+
+#onas {
     float: left;
     width: 80%;
-    background-color: white;
-    height: auto;
-    padding: 40px;
     margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center; 
-
 }
+
+#onas-content {
+    background-color: white;
+    padding: 67.5px;
+    border-radius: 70px;
+    box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.1), -10px 0px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
 
 #onas p {
     font-size: 18px;
@@ -286,10 +332,6 @@ nav ul li a.active, nav ul li a:hover{
     margin-bottom: 20px;
 }
   
-
-
-
-
 footer {
     display: flex;
     justify-content: space-between;
