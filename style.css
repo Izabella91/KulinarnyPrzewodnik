@@ -66,7 +66,7 @@ ul li{
 }
 ul li a{
     color:#ffffff;
-    font-size: 17px;
+    font-size: 20px;
     padding: 6px 15px;
     border-radius: 5px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -74,8 +74,10 @@ ul li a{
 
 nav{
      /*Menu boczne "Kategorie restauracji"*/
+    
     float:left;
     width:16%;
+    text-align: center;
     font-weight: bold;
     background-color: #63b0aa;
     height: 700px;
@@ -87,7 +89,7 @@ nav{
   
 label.menu{
 color:rgb(255, 255, 255);
-font-size: 16px;
+font-size: 20px;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 line-height: 40px;
 margin-left: 7px;
@@ -104,18 +106,19 @@ padding:0 1px;
 nav ul li a{
     color: rgb(0, 0, 0);
     font-size:17px;  
+    text-align: center;
     padding:13px 3px;
     border-radius: 20px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 nav ul li a.active, nav ul li a:hover{
-    background: #c0d2e0;
+    background: #5DA6A0;
     transition: .8s;
 }
 
 .search ul li a.active, .search ul li a:hover{
-    background: #c0d2e0;
+    background: #5DA6A0;
     transition: .8s;
 }
 #aktualnosci {
@@ -232,7 +235,9 @@ nav ul li a.active, nav ul li a:hover{
 }
 
 .grid-container .grid-item img {
+    width: 300px;
     height: 200px;
+    object-fit: cover;
     padding: 10px;
     
 }
@@ -426,4 +431,84 @@ footer > section {
 .copyright p {
     margin: 0;
     font-size: 12px;
+}
+
+/* Styl dla miniatur */
+.foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Styl dla powiększenia po najechaniu */
+.foto:hover {
+    transform: scale(3);
+}
+
+/* Dodatkowy styl, aby poprawić układ miniatur */
+.foto-container {
+    display: flex;
+    gap: 10px;
+}
+
+.foto-container .foto {
+    margin: 5px;
+}
+
+/* Styl dla wyników wyszukiwania */
+.wynik {
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+}
+
+.wynik ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.wynik li {
+    height: 100%;
+}
+
+.wynik h5,
+.wynik p {
+    font-size: 20px;
+    margin: 0;
+    text-align: left; /* Dodane, aby tekst był wyśrodkowany */
+}
+
+.wynik h5 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.reContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Dodane, aby elementy były wyśrodkowane */
+}
+
+.reContainer .foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.reContainer .foto:hover {
+    transform: scale(3);
+}
+
+.reContainer .info {
+    width: 100%;
+    text-align: left; /* Dodane, aby tekst był wyśrodkowany */
+}
+
+.reContainer h5,
+.reContainer p {
+    margin: 0;
 }

@@ -121,8 +121,29 @@ app.get('/search', async (req, res) => {
       res.status(500).send('Błąd serwera');
     }
   });
-
+  app.get('/restauracja', async (req, res) => {
+    const nazwaRestauracji = req.query.nazwa;
+  
+    try {
+      const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+      const db = client.db(dbName);
+  
+      const restaurantsCollection = db.collection('restauracje');
+  
+      const result = await restaurantsCollection.findOne({ nazwa: nazwaRestauracji });
+  
+      if (!result) {
+        res.status(404).json({ error: 'Restauracja nie znaleziona' });
+      } else {
+        res.json(result);
+      }
+  
+      client.close();
+    } catch (error) {
+      console.error('Błąd podczas łączenia z bazą danych:', error);
+      res.status(500).json({ error: 'Błąd serwera' });
+    }
+  });
   app.listen(port, () => {
     console.log(`Serwer uruchomiony na porcie ${port}`);
 });
-  

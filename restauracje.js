@@ -1,3 +1,4 @@
+//restauracje.js
 document.addEventListener('DOMContentLoaded', () => {
   const kuchnie = ['amerykanska', 'arabska', 'chinska', 'grecka', 'gruzinska', 'indynska', 'japonska', 'koreanska', 'meksykanska', 'tajska', 'turecka', 'ukrainska', 'wegetarianska', 'wietnamska', 'wloska', 'polska']; // Dodaj inne kuchnie według potrzeb
   kuchnie.forEach(kuchnia => {
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
                 
             gridItem.addEventListener('click', () => {  
-              window.location.href = 'index.html'; // na ten moment przenosi do index.html po kliknięciu w restaurację
+              window.location.href = `podstrona.html?nazwa=${encodeURIComponent(restauracja.nazwa)}`; // na ten moment przenosi do index.html po kliknięciu w restaurację
             });
 
             gridContainer.appendChild(gridItem);  
