@@ -124,7 +124,6 @@ nav ul li a.active, nav ul li a:hover{
     background-color: rgb(255, 255, 255);
     height: 700px;
     max-height: 900px; /* Ustaw maksymalną wysokość diva */
-    line-height: 200px;
     display: flex;
     flex-direction: column;
     overflow-y: auto; /* Dodaj pionowy pasek przewijania w razie potrzeby */
@@ -135,6 +134,7 @@ nav ul li a.active, nav ul li a:hover{
     padding: 0;
     margin: 0;
     margin-bottom: 60px;
+    margin-top: 100px;
     border: 10px solid #ccc;   /*ramka*/
     border-radius: 25px;
     padding: 10px;
@@ -172,6 +172,7 @@ nav ul li a.active, nav ul li a:hover{
     margin-top: -70px; /* Zmniejsz margines na górę dla napisu */
     font-size: 36px; /* Dostosuj wielkość napisu według potrzeb */
  /* Dodaj margines na górę dla napisu */
+    margin-top: 25px;
 }
 .thumbnail1 {
     margin-top: 200px;
@@ -181,13 +182,14 @@ nav ul li a.active, nav ul li a:hover{
     margin-bottom: 20px; /* Dodaj margines na dół dla obrazka */
 }
 .thumbnail {
-    margin-top: 200px;
+    margin-top: 100px;
     width: 200px;
     height: 133px;
     object-fit: cover;
-    margin-bottom: 20px; /* Dodaj margines na dół dla obrazka */
+    margin-bottom: 10px; /* Dodaj margines na dół dla obrazka */
     border: 1px solid #000000; /* Dodaj obramowanie obrazka */
 }
+
 
 .grid-container {
     display: grid;
@@ -196,16 +198,47 @@ nav ul li a.active, nav ul li a:hover{
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    margin-top: 100px;
     margin-right: 50px;
 }
 
-.grid-item {
+.grid-container .grid-item {
     background-color: #63b0aa;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
+    margin: 0 50px;
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
+    transition: transform 0.3s;
+    cursor: pointer;
+   width: 400px;
+   height: 320px;
+}
+
+.grid-container .grid-item h3 {
+    font-size: 32px;
+    padding: 10px;
+}
+.grid-container .grid-item p {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.grid-container .grid-item p span {
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.grid-container .grid-item img {
+    height: 200px;
+    padding: 10px;
+    
+}
+
+.grid-container .grid-item:hover {
+    transform: scale(1.1);
 }
 
 #kontakt {
