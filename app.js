@@ -25,12 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           data.forEach(restauracja => {
             resultContainer.innerHTML += `
-              <div>
-                <h3>${restauracja.nazwa}</h3>
-                <p>Lokalizacja: ${restauracja.lokalizacja}</p>
-                <p>Opis: ${restauracja.opis}</p>
-                <img src="${restauracja.zdjecie}" alt="${restauracja.nazwa}">
-              </div>
+            <div class="search-result">
+            <ul>
+             <li><img src="${restauracja.zdjecie.length > 0 ? restauracja.zdjecie[0] : 'brak-obrazu.jpg'}" alt="${restauracja.nazwa}" width="400" height="200"></li>
+            <li>
+            <h3>${restauracja.nazwa}</h3>
+            <p>Kuchnia: ${restauracja.kuchnia}</p>
+            <p>Ulica: ${restauracja.ulica}</p>
+            <p>Opis: ${restauracja.opis}</p>
+            </li>
+            </ul>
+            </div>
+
             `;
           });
         }
