@@ -1,3 +1,4 @@
+//restauracje.js
 document.addEventListener('DOMContentLoaded', () => {
   const kuchnie = ['amerykanska', 'arabska', 'chinska', 'grecka', 'gruzinska', 'indynska', 'japonska', 'koreanska', 'meksykanska', 'tajska', 'turecka', 'ukrainska', 'wegetarianska', 'wietnamska', 'wloska', 'polska']; // Dodaj inne kuchnie według potrzeb
   kuchnie.forEach(kuchnia => {
@@ -27,14 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             gridItem.innerHTML = `
               <h3>${restauracja.nazwa}</h3>
-              <p>Lokalizacja: ${restauracja.ulica}</p>
-              <p>Opis: ${restauracja.opis}</p>
+              <p><span>Lokalizacja:</span> ${restauracja.ulica}</p>
               <img src="${zdjecieSrc}" alt="${restauracja.nazwa}">
-              <p>Link: <a href="${restauracja.link}" target="_blank">${restauracja.link}</a></p>
-              <p>Link 2: <a href="${restauracja.link2}" target="_blank">${restauracja.link2}</a></p>
+              
             `;
+                
+            gridItem.addEventListener('click', () => {  
+              window.location.href = `podstrona.html?nazwa=${encodeURIComponent(restauracja.nazwa)}`; // na ten moment przenosi do index.html po kliknięciu w restaurację
+            });
 
-            gridContainer.appendChild(gridItem);
+            gridContainer.appendChild(gridItem);  
           });
         }
       })
@@ -43,3 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+
+
+{/* <p>Link: <a href="${restauracja.link}" target="_blank">${restauracja.link}</a></p>
+              <p>Link 2: <a href="${restauracja.link2}" target="_blank">${restauracja.link2}</a></p>
+            <p>Opis: ${restauracja.opis}</p> */}

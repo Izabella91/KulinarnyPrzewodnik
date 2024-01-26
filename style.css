@@ -12,6 +12,10 @@
 body{
     box-sizing: border-box;
     font-family: montserrat;
+    display: flex;
+    flex-direction: column;
+
+    
 }
 
 .main-img {
@@ -28,12 +32,12 @@ body{
 .search {                           /*Tutaj zaczyna się wyszukiwarka*/
     background-color: #444444;
     height: 35px;
-    width:84%;
-    position: absolute;
-    right: 0; 
+    width:100%;
+    float: right; 
 }
 section input {
-    flex: 1; 
+    margin-left: 200px;
+
     height:90%;
     border:0;
     outline:0; 
@@ -47,7 +51,7 @@ section button {                    /*Przycisk do wyszukiwarki*/
     height: 89%;
     background: #787575;
     color: #ffffff;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
     padding:0 10px;
     border-top-right-radius: 10px;
@@ -66,72 +70,114 @@ ul li{
 }
 ul li a{
     color:#ffffff;
-    font-size: 17px;
-    padding: 6px 15px;
-    border-radius: 5px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    padding: 6px 0 0 0 ;
+    font-family: 'Inter', sans-serif;
 }
 
 nav{
-                                                /*Menu boczne "Kategorie restauracji"*/
-    float:left;
+     /*Menu boczne "Kategorie restauracji"*/
+    
+     float:left;
     width:16%;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 30px;
     font-weight: bold;
-    background-color: #63b0aa;
-    height: 700px;
+    background-color: #ffffff;
     flex-basis: 100%;
     box-sizing: border-box;
     cursor: pointer;
-    
+
   }
   
 label.menu{
-color:rgb(255, 255, 255);
-font-size: 16px;
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-line-height: 40px;
-margin-left: 7px;
+color: #63b0aa;
+font-size: 25px;
+font-family: 'Inter', sans-serif;
+line-height: 70px;
 
 }
 
-
 nav ul li{
-font-size: 10px;
+font-size: 20px;
 line-height: 35px;
 padding:0 1px;
+width: 100%;
+line-height: 40px;
+text-transform: uppercase;
 }
 
 nav ul li a{
     color: rgb(0, 0, 0);
-    font-size:17px;  
-    padding:13px 3px;
-    border-radius: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:20px;  
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+
 }
 
 nav ul li a.active, nav ul li a:hover{
-    background: #c0d2e0;
-    transition: .8s;
+    border-bottom: 2px solid #bdd9f2;
+
 }
 
 .search ul li a.active, .search ul li a:hover{
-    background: #c0d2e0;
-    transition: .8s;
+    border-bottom: 2px solid #bdd9f2;
+
 }
 #aktualnosci {
     float: right;
     width: 80%;
     background-color: rgb(255, 255, 255);
-    height: 700px;
-    max-height: 900px; /* Ustaw maksymalną wysokość diva */
-    line-height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     overflow-y: auto; /* Dodaj pionowy pasek przewijania w razie potrzeby */
 
 }
 
+
+#strona-glowna{
+
+display: flex;
+
+}
+
+.search-result {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0px;
+    margin-top: 60px;
+    border: 10px solid #ccc;   /*ramka*/
+    border-radius: 25px;
+    padding: 10px;
+  }
+  
+  .search-result ul {
+    display: flex;
+  }
+  
+  .search-result img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  
+  .search-result h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
+  }
+  .search-result p {
+    margin: 10px 0;
+  }  
+  
 
 .centered-content {
     text-align: center;
@@ -141,46 +187,85 @@ nav ul li a.active, nav ul li a:hover{
 }
 
 .centered-content h1 {
-    margin-top: -70px; /* Zmniejsz margines na górę dla napisu */
+    margin-top: 0px; /* Zmniejsz margines na górę dla napisu */
     font-size: 36px; /* Dostosuj wielkość napisu według potrzeb */
  /* Dodaj margines na górę dla napisu */
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+
 }
 .thumbnail1 {
-    margin-top: 200px;
-    width: 200px;
-    height: 100px;
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
     object-fit: cover;
     margin-bottom: 20px; /* Dodaj margines na dół dla obrazka */
 }
 .thumbnail {
-    margin-top: 200px;
-    width: 200px;
-    height: 133px;
+    margin-top: 50px;
+    width: 100px;
+    height: 60px;
     object-fit: cover;
-    margin-bottom: 20px; /* Dodaj margines na dół dla obrazka */
+    margin-bottom: 10px; /* Dodaj margines na dół dla obrazka */
     border: 1px solid #000000; /* Dodaj obramowanie obrazka */
 }
+
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 10px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    margin-top: 50px;
     margin-right: 50px;
+    margin-left: 50px;
 }
 
-.grid-item {
+.grid-container .grid-item {
     background-color: #63b0aa;
     color: white;
-    padding: 20px;
+    padding: 10px 0;
+    margin: 0 10px;
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    width: 400px;
+    height: 320px;
+    box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.1), -10px 0px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
-  #kontakt {
+.grid-container .grid-item h3 {
+    font-size: 32px;
+    padding: 5px;
+}
+.grid-container .grid-item p {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.grid-container .grid-item p span {
+    font-size: 16px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.grid-container .grid-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    padding: 10px;
+    
+}
+
+.grid-container .grid-item:hover {
+    transform: scale(1.05);
+}
+
+#kontakt {
     margin-top: 100px;
     background-color: white;
     padding: 50px;
@@ -203,13 +288,15 @@ nav ul li a.active, nav ul li a:hover{
 #kontakt-informacje {
     padding: 20px;
     flex: 1;
-    text-align: left;
+    text-align: right;
+    margin-right: 10px;
 }
 
 #kontakt-informacje p {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
+    margin-top: 10px; 
 }
 
 #kontakt-formularz {
@@ -217,6 +304,7 @@ nav ul li a.active, nav ul li a:hover{
     box-sizing: border-box;
     padding-left: 20px;
     text-align: left;
+    margin-top: -100px;
 }
 
 #kontakt-formularz form {
@@ -227,14 +315,23 @@ nav ul li a.active, nav ul li a:hover{
 
 #kontakt-formularz label {
     font-size: 18px;
+    margin-left: 15px;
     color: #333;
     margin-bottom: 10px;
     width: 100%;
 }
 
-#kontakt-formularz input,
+#kontakt-formularz input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 #kontakt-formularz textarea {
     width: 100%;
+    height: 150px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -243,11 +340,12 @@ nav ul li a.active, nav ul li a:hover{
 
 #kontakt-formularz button {
     padding: 10px 20px;
+    margin-left: 500px;
     background-color: #63b0aa;
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -261,24 +359,29 @@ nav ul li a.active, nav ul li a:hover{
     color: #333;
     margin-bottom: 20px;
     margin-top: 20px;
+    margin-left: 260px;
     text-align: left;
 }
-  #onas {
+
+#onas {
     float: left;
     width: 80%;
-    background-color: white;
-    height: auto;
-    padding: 40px;
     margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center; 
-
 }
+
+#onas-content {
+    background-color: white;
+    padding: 67.5px;
+    border-radius: 70px;
+    box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.1), -10px 0px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
 
 #onas p {
     font-size: 18px;
@@ -286,10 +389,6 @@ nav ul li a.active, nav ul li a:hover{
     margin-bottom: 20px;
 }
   
-
-
-
-
 footer {
     display: flex;
     justify-content: space-between;
@@ -297,6 +396,7 @@ footer {
     padding: 40px 100px;
     color: #fff;
     align-items: center;
+    margin-top: auto;
 
 }
 
@@ -342,7 +442,7 @@ footer > section {
     background-color: #498C86;
     height: 50px;
     color: #fff;
-    margin: 0;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -351,4 +451,88 @@ footer > section {
 .copyright p {
     margin: 0;
     font-size: 12px;
+}
+
+/* Styl dla miniatur */
+.foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Styl dla powiększenia po najechaniu */
+.foto:hover {
+    transform: scale(3);
+}
+
+/* Dodatkowy styl, aby poprawić układ miniatur */
+.foto-container {
+    display: flex;
+    gap: 10px;
+}
+
+.foto-container .foto {
+    margin: 5px;
+}
+
+/* Styl dla wyników wyszukiwania */
+.wynik {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+}
+
+.wynik ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.wynik li {
+    height: 100%;
+}
+
+
+.wynik p {
+    font-size: 20px;
+    margin: 0;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.wynik h5 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.reContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Dodane, aby elementy były wyśrodkowane */
+}
+
+.reContainer .foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.reContainer .foto:hover {
+    transform: scale(2);
+}
+
+.reContainer .info {
+    width: 100%;
+    text-align: left; /* Dodane, aby tekst był wyśrodkowany */
+}
+
+.reContainer h5,
+.reContainer p {
+    margin: 0;
 }
